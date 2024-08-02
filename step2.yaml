@@ -9,7 +9,7 @@ load_in_4bit: false
 strict: false
 
 datasets:
-  - path: data.jsonl
+  - path: xh570j.jsonl
 #    type:
 #      system_prompt: ""
 #      system_format: "<|im_start|>system\n{system}<|im_end|>\n"
