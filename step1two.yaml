@@ -1,4 +1,4 @@
-base_model: Qwen/Qwen2-1.5B
+base_model: MangyMango/testing1
 model_type: AutoModelForCausalLM
 tokenizer_type: AutoTokenizer
 
@@ -9,36 +9,8 @@ load_in_4bit: false
 strict: false
 
 datasets:
-#  - path: civit-slop-combined.jsonl
-#    type:
-#      system_prompt: ""
-#      system_format: "<|im_start|>system\n{system}<|im_end|>\n"
-#      field_system: instruction
-#      field_instruction: input
-#      field_input: ""
-#      field_output: output
-#      no_input_format: "<|im_start|>user\n{instruction}<|im_end|>\n<|im_start|>assistant\n"
 
-#      system_prompt: ""
-#      field_instruction: instruction
-#      field_input: input
-#      field_output: output
-#      format: |-
-#        <|im_start|>system
-#        {instruction}<|im_end|>
-#        <|im_start|>user
-#        {input}<|im_end|>
-#        <|im_start|>assistant
-#        {output}
-
-#    type: alpaca
-#    conversation: mpt-30b-instruct
-#    field_system: instruction
-#    field_instruction: input
-#    field_input: input
-#    field_output: output
-
-  - path: kalomaze/Opus_Instruct_25k
+  - path: MangoHQ/Test123
     type: sharegpt
     conversation: mpt-30b-instruct
 
@@ -66,7 +38,7 @@ wandb_watch:
 wandb_name: qwen1.5b-2
 wandb_log_model:
 
-gradient_accumulation_steps: 16
+gradient_accumulation_steps: 64
 micro_batch_size: 1
 num_epochs: 2
 optimizer: adamw_torch
