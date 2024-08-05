@@ -8,8 +8,6 @@ strict: false
 
 # huggingface repo
 datasets: 
-  - path: lodrick-the-lafted/NopmWritingStruct
-    type: customgemma2
   - path: MangoHQ/Claude-Data-Anon-Killed
     type: customgemma2
   - path: kalomaze/Opus_Instruct_25k
