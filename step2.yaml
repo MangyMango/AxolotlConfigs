@@ -1,4 +1,4 @@
-base_model: MangyMango/testing4
+base_model: MangyMango/Qwen-1.5B-Claude
 model_type: AutoModelForCausalLM
 tokenizer_type: AutoTokenizer
 
@@ -9,7 +9,7 @@ load_in_4bit: false
 strict: false
 
 datasets:
-  - path: MangyMango/Power
+  - path: MangyMango/CivitAI-Prompts
 #    type:
 #      system_prompt: ""
 #      system_format: "<|im_start|>system\n{system}<|im_end|>\n"
@@ -37,11 +37,6 @@ datasets:
 #    field_instruction: input
 #    field_input: input
 #    field_output: output
-
-#  - path: kalomaze/Opus_Instruct_25k
-#    type: sharegpt
-#    conversation: mpt-30b-instruct
-
 chat_template: alpaca
 
 dataset_prepared_path:
