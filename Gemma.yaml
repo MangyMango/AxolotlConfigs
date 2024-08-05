@@ -35,10 +35,10 @@ sample_packing: true
 eval_sample_packing: false
 pad_to_sequence_len: true
 
-wandb_project:
+wandb_project: Ohashi-9B
 wandb_entity:
 wandb_watch:
-wandb_name:
+wandb_name: Ohashi-9B-run1
 wandb_log_model:
 
 
