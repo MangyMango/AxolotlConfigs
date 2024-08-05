@@ -7,18 +7,15 @@ load_in_4bit: true
 strict: false
 
 # huggingface repo
-chat_template: gemma
 datasets: 
   - path: MangyMango/MangoRPlogs
-    type: sharegpt
+    type: customgemma2
   - path: MangoHQ/Claude-Data-Anon-Killed
-    type: sharegpt
+    type: customgemma2
   - path: kalomaze/Opus_Instruct_25k
-    type: sharegpt
+    type: customgemma2
   - path: kalomaze/Opus_Instruct_3k
-    type: sharegpt
-    chat_template: gemma
-    drop_system_message: true
+    type: customgemma2
 val_set_size: 0.0
 output_dir: ./outputs/out
 
