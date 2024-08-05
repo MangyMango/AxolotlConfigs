@@ -30,7 +30,7 @@ lora_alpha: 16
 lora_dropout: 0.05
 lora_target_linear: true
 
-sequence_len: 2048
+sequence_len: 8192
 sample_packing: true
 eval_sample_packing: false
 pad_to_sequence_len: true
