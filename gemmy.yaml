@@ -1,0 +1,82 @@
+
+
+
+wandb login : 0e220a839032e38d1fb8c61996048eaa48b66150|
+
+wget https://raw.githubusercontent.com/xzuyn/axolotl/prompt_formats/src/axolotl/prompt_strategies/customgemma2.py
+
+python -m axolotl.cli.preprocess Gemma2.yaml
+
+accelerate launch -m axolotl.cli.train Gemma2.yaml
+
+base_model: SillyTilly/google-gemma-2-9b
+model_type: AutoModelForCausalLM
+tokenizer_type: AutoTokenizer
+
+load_in_8bit: false
+load_in_4bit: true
+strict: false
+
+# huggingface repo
+datasets: 
+  - path: lodrick-the-lafted/NopmWritingStruct
+    type: customgemma2
+  - path: MangoHQ/Claude-Data-Anon-Killed
+    type: customgemma2
+  - path: kalomaze/Opus_Instruct_25k
+    type: customgemma2
+  - path: kalomaze/Opus_Instruct_3k
+    type: customgemma2
+val_set_size: 0.0
+output_dir: ./outputs/out
+
+adapter: qlora
+lora_r: 32
+lora_alpha: 32
+lora_dropout: 0.05
+lora_target_linear: true
+
+sequence_len: 8192
+sample_packing: true
+eval_sample_packing: false
+pad_to_sequence_len: true
+
+wandb_project: Ohashi-9B
+wandb_entity:
+wandb_watch:
+wandb_name: Ohashi-9B-run1
+wandb_log_model:
+
+
+gradient_accumulation_steps: 32
+micro_batch_size: 1
+num_epochs: 2
+optimizer: adamw_bnb_8bit
+lr_scheduler: cosine
+learning_rate: 0.0002
+
+train_on_inputs: false
+group_by_length: false
+bf16: auto
+fp16:
+tf32: true
+
+gradient_checkpointing: true
+early_stopping_patience:
+resume_from_checkpoint:
+local_rank:
+logging_steps: 1
+xformers_attention:
+flash_attention: true
+
+warmup_ratio: 0.1
+evals_per_epoch:
+eval_table_size:
+eval_max_new_tokens: 128
+saves_per_epoch: 1
+debug:
+deepspeed:
+weight_decay: 0.0
+fsdp:
+fsdp_config:
+special_tokens:
