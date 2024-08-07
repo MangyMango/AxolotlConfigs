@@ -21,7 +21,7 @@ datasets:
   - path: MangoHQ/Claude-Data-Anon-Killed
     type: sharegpt
     conversation: chatml
-  - path: MangoHQ/Gryphe-3.5-16k-Subset
+  - path: MangoHQ/Gryphe-3.5-16k-Subset-fixed
     type: sharegpt
     conversation: chatml
   - path: PJMixers/lodrick-the-lafted_OpusStories-ShareGPT
@@ -32,7 +32,7 @@ chat_template: chatml
 dataset_prepared_path:
 val_set_size: 0.05
 output_dir: ./outputs/out
-sequence_len: 16384
+sequence_len: 32768
 sample_packing: true
 eval_sample_packing: true
 pad_to_sequence_len: true
