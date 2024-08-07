@@ -9,17 +9,17 @@ strict: false
 # huggingface repo
 datasets:
   - path: lodrick-the-lafted/NopmWritingStruct
-  - type: sharegpt
+  - type: customgemma2
   - path: kalomaze/Opus_Instruct_25k
-  - type: sharegpt
+  - type: customgemma2
   - path: kalomaze/Opus_Instruct_3k
-  - type: sharegpt
+  - type: customgemma2
   - path: MangoHQ/Claude-Data-Anon-Killed
-  - type: sharegpt
+  - type: customgemma2
   - path: MangoHQ/Gryphe-3.5-16k-Subset
-  - type: sharegpt
-  - path: lodrick-the-lafted/OpusStories
-  - type: sharegpt
+  - type: customgemma2
+  - path: PJMixers/lodrick-the-lafted_OpusStories-ShareGPT
+  - type: customgemma2
 
 val_set_size: 0.0
 output_dir: ./outputs/out
@@ -38,7 +38,7 @@ pad_to_sequence_len: true
 wandb_project: Ohashi-9B
 wandb_entity:
 wandb_watch:
-wandb_name: Ohashi-9B-run1
+wandb_name: Ohashi-9B-run2
 wandb_log_model:
 
 
@@ -47,7 +47,7 @@ micro_batch_size: 1
 num_epochs: 2
 optimizer: adamw_bnb_8bit
 lr_scheduler: cosine
-learning_rate: 0.0002
+learning_rate: 0.00002
 
 train_on_inputs: false
 group_by_length: false
