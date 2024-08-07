@@ -7,13 +7,20 @@ load_in_4bit: true
 strict: false
 
 # huggingface repo
-datasets: 
-  - path: MangoHQ/Claude-Data-Anon-Killed
-    type: customgemma2
+datasets:
+  - path: lodrick-the-lafted/NopmWritingStruct
+  - type: sharegpt
   - path: kalomaze/Opus_Instruct_25k
-    type: customgemma2
+  - type: sharegpt
   - path: kalomaze/Opus_Instruct_3k
-    type: customgemma2
+  - type: sharegpt
+  - path: MangoHQ/Claude-Data-Anon-Killed
+  - type: sharegpt
+  - path: MangoHQ/Gryphe-3.5-16k-Subset
+  - type: sharegpt
+  - path: lodrick-the-lafted/OpusStories
+  - type: sharegpt
+
 val_set_size: 0.0
 output_dir: ./outputs/out
 
