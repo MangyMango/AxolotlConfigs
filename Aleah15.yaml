@@ -24,7 +24,7 @@ datasets:
   - path: MangoHQ/Gryphe-3.5-16k-Subset
   - type: sharegpt
     conversation: chatml
-  - path: lodrick-the-lafted/OpusStories
+  - path: PJMixers/lodrick-the-lafted_OpusStories-ShareGPT
   - type: sharegpt
     conversation: chatml
     
